@@ -1,9 +1,15 @@
 #!/usr/bin/python3
+"""
+Fetches and displays TODO list progress from JSONPlaceholder API.
+"""
 import requests
 import sys
 
 
 def fetch_data(employee_id):
+    """
+    Prints the TODO list progress for an employee.
+    """
     base_url = 'https://jsonplaceholder.typicode.com'
 
     user_url = f'{base_url}/users/{employee_id}'
