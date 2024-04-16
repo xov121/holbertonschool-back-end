@@ -29,10 +29,8 @@ def export_to_csv(employee_id):
     todos_response = requests.get(todos_url)
     todos_data = todos_response.json()
 
-    # Define CSV file name
     csv_file_name = f"{employee_id}.csv"
 
-    # Write data to CSV
     with open(csv_file_name, mode='w', newline='') as file:
         writer = csv.writer(file, quoting=csv.QUOTE_ALL)
 
